@@ -46,6 +46,7 @@ public abstract class ShipmentOrder implements SummaryPrintable {
         System.out.println("Order " + orderNumber + " processed. Price: " + lastCalculatedPrice);
     }
 
+    @Override
     public String buildSummaryLine() {
         return String.format("Order: %s | Customer: %s | Type: %s | Price: %.2f", orderNumber, customerName, getShipmentType(), lastCalculatedPrice);
     }
